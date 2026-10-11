@@ -1,0 +1,14 @@
+<h1>Register</h1>
+<form (ngSubmit)="onSubmit()">
+  <label>First name</label><br />
+  <input type="text" name="firstName" [(ngModel)]="form.firstName" required /><br />
+  <label>Last name</label><br />
+  <input type="text" name="lastName" [(ngModel)]="form.lastName" required /><br />
+  <label>Username</label><br />
+  <input type="text" name="username" [(ngModel)]="form.username" required /><br />
+  <label>Password</label><br />
+  <input type="password" name="password" [(ngModel)]="form.password" required /><br /><br />
+  <button type="submit">Register</button>
+</form>
+<p *ngIf="errorMessage">{{ errorMessage }}</p>
+<a routerLink="/">Back to posts</a>

@@ -1,0 +1,10 @@
+<h1>Login</h1>
+<form (ngSubmit)="onSubmit()">
+  <label>Username</label><br />
+  <input type="text" name="username" [(ngModel)]="form.username" required /><br />
+  <label>Password</label><br />
+  <input type="password" name="password" [(ngModel)]="form.password" required /><br /><br />
+  <button type="submit">Login</button>
+</form>
+<p *ngIf="errorMessage">{{ errorMessage }}</p>
+<a routerLink="/">Back to posts</a>

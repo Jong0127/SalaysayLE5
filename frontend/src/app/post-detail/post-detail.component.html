@@ -1,0 +1,6 @@
+<a routerLink="/">&larr; Back to posts</a>
+<div *ngIf="post">
+  <h1>{{ post.title }}</h1>
+  <p>{{ post.dateCreated | date }}</p>
+  <p>{{ post.body }}</p>
+</div>
